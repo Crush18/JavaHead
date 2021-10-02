@@ -1,20 +1,27 @@
 package com.company;
 
-public class SimpleDotComGame {
+import java.util.ArrayList;
+
+public class DotComGame {
 
     public static void main(String[] args) {
         int numOfGuess = 0;
         GameHelper helper = new GameHelper();
 
         int randomNum = (int)(Math.random() * 5);
-        int[] locations = {randomNum, randomNum+1, randomNum+2};
+        ArrayList<String> locations = new ArrayList<>();
+        locations.add(String.valueOf(randomNum));
+        locations.add(String.valueOf(randomNum+1));
+        locations.add(String.valueOf(randomNum+2));
 
-        SimpleDotCom theDotCom = new SimpleDotCom();
+//        int[] locations = {randomNum, randomNum+1, randomNum+2};
+
+        DotCom theDotCom = new DotCom();
         theDotCom.setLocationCells(locations);
 
         boolean isAlive = true;
         while (isAlive == true){
-            String guess = helper.getUserInput("enter a number");
+            String guess = helper.getUserInput("Enter a number");
             String result = theDotCom.checkYourself(guess);
             numOfGuess++;
             if (result.equals("kill")){
