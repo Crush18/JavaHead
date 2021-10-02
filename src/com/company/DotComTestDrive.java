@@ -3,9 +3,13 @@ package com.company;
 import java.util.ArrayList;
 
 // 测试码
-public class SimpleDotComTestDrive {
+public class DotComTestDrive {
 
     public static void main(String[] args) {
+
+        DotComBust dotComGame = new DotComBust();
+        dotComGame.Begin();
+
         DotCom dot = new DotCom();
 
 //        int[] locations = {2, 3, 4};
