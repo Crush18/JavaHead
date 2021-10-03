@@ -8,7 +8,7 @@ public class DotComTestDrive {
     public static void main(String[] args) {
 
         DotComBust dotComGame = new DotComBust();
-        dotComGame.Begin();
+//        dotComGame.Begin();
 
         DotCom dot = new DotCom();
 

@@ -12,10 +12,6 @@ public class DotCom {
         locationCells = locs;
     }
 
-    public String getDotComName() {
-        return DotComName;
-    }
-
     public void setDotComName(String dotComName) {
         DotComName = dotComName;
     }
@@ -25,14 +21,17 @@ public class DotCom {
         String result = "miss";
         int index = locationCells.indexOf(stringGuess);
         if (index >= 0){
-            result = "hit";
+
             locationCells.remove(index);
             if (locationCells.isEmpty()){
                 result = "kill";
+                System.out.println("Oh You hava killed " + DotComName + " :( ");
+            }else{
+                result = "hit";
             }
         }
 
-        System.out.println(result);
+//        System.out.println(result);
         return result;
     }
 }

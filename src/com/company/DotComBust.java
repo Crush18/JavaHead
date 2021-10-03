@@ -18,8 +18,12 @@ public class DotComBust {
             dotComsList.add(dot);
         }
 
+        System.out.println("Your goal is to sink three dot com");
+        System.out.println("Pet.com, Go2.com, Rabbit.com");
+        System.out.println("Try to sink them all in the fewer numbers of guesses");
+
         for (DotCom dotComToSet:dotComsList) {
-            ArrayList<String> newLocation = helper.placeDotCom();
+            ArrayList<String> newLocation = helper.placeDotCom(3);
             dotComToSet.setLocationCells(newLocation);
         }
     }
